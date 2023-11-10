@@ -1,0 +1,22 @@
+{
+    "cards" : [
+        {
+            "category" : "maths",
+            "question" : "What is 2+2?",
+            "answer" : "4",
+            "id" : 1
+        },
+        {
+            "category" : "biology",
+            "question" : "What is mitochondria?",
+            "answer" : "powerhouse of the cell",
+            "id" : 2
+        },
+        {
+            "category" : "physics",
+            "question" : "What is the formula for speed?",
+            "answer" : "Distance over time. (s=d/t)",
+            "id" : 3
+        }
+    ]
+}

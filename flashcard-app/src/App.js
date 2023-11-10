@@ -1,9 +1,10 @@
+import Flashcard from "./components/Flashcard";
 
 function App() {
   return (
     <div className="App">
-
-        <h1>App Component</h1>
+      <h1>Flashcards</h1>
+      <Flashcard />
     </div>
   );
 }
