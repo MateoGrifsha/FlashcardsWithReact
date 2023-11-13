@@ -1,22 +1,28 @@
 {
     "cards" : [
         {
+            "category" : "home",
+            "question" : "Welcome to Flashcards. Choose a category from the menu above",
+            "answer" : "",
+            "id" : 1
+        },
+        {
             "category" : "maths",
             "question" : "What is 2+2?",
             "answer" : "4",
-            "id" : 1
+            "id" : 2
         },
         {
             "category" : "biology",
             "question" : "What is mitochondria?",
             "answer" : "powerhouse of the cell",
-            "id" : 2
+            "id" : 3
         },
         {
             "category" : "physics",
             "question" : "What is the formula for speed?",
             "answer" : "Distance over time. (s=d/t)",
-            "id" : 3
+            "id" : 4
         }
     ]
 }
