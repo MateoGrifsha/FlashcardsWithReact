@@ -1,9 +1,9 @@
 {
     "cards" : [
         {
-            "category" : "home",
-            "question" : "Welcome to Flashcards. Choose a category from the menu above",
-            "answer" : "",
+            "category" : "physics",
+            "question" : "How many laws does Newton have?",
+            "answer" : "Three",
             "id" : 1
         },
         {

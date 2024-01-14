@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import Maths from "./pages/Maths"
 import Biology from "./pages/Biology"
 import Physics from "./pages/Physics"
+import Create from './pages/Create';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 <Route exact path="/maths" element ={<Maths />} />
                 <Route exact path="/biology" element ={<Biology />} />
                 <Route exact path="/physics" element ={<Physics />} />
+                <Route exact path="/create" element ={<Create />} />
               </Routes>
             </div>
         </div>

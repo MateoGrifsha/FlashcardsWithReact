@@ -46,6 +46,14 @@ body{
   color: rgb(20, 20, 20);
   transition: 0.125s ease-in-out;
 }
+.welcome-container{
+  background: linear-gradient(to bottom left, rgb(64, 20, 64), rgb(48, 1, 48));
+  padding: 30px;
+}
+.welcome-text{
+  font-size: 32px;
+  font-weight: 600;
+}
 .content{
   display: flex;
   justify-content: center;
@@ -53,7 +61,7 @@ body{
   margin-top: 200px;
 }
 .flashcard-container{
-  background: linear-gradient(to bottom right, rgb(64, 15, 64), rgb(51, 10, 51));
+  background: linear-gradient(to bottom left, rgb(64, 20, 64), rgb(48, 1, 48));
   width: 450px;
   min-height: 250px;
   border-radius: 18px;
@@ -62,13 +70,15 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: -3px -3px 10px rgb(159, 159, 159), 5px 5px 12px black;
+  text-align: center;
+  box-shadow: -3px -3px 10px rgb(69, 69, 69), 5px 5px 12px black;
 
 }
-.flashcard-container p {
+.category-label {
   position: absolute;
   top: 30px;
-  left: 15px;
+  left: 30px;
+  text-transform: capitalize;
 }
 .flashcard-container h2{
   margin: 10px auto;
@@ -76,7 +86,7 @@ body{
   font-size: 32px;
   width: 350px;
 }
-.flashcard-container button {
+.answer-button {
   position: absolute;
   bottom: 30px;
   left: 37.5%;
@@ -90,7 +100,7 @@ body{
   color: white;
   cursor: pointer;
 }
-.flashcard-container button:hover {
+.answer-button:hover {
   background: linear-gradient(to right, rgb(74, 29, 115), rgb(41, 0, 79));
 }
 

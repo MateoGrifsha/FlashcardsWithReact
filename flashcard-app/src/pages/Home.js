@@ -1,8 +1,9 @@
-import Flashcard from "../components/Flashcard";
 
 const Home = () => {
     return ( 
-        <div><Flashcard category="home"/></div>
+        <div className="welcome-container">
+            <p className="welcome-text">Welcome to Flashcards. Choose a category from the menu above</p>
+        </div>
      );
 }
  
