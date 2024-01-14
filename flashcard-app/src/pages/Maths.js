@@ -1,6 +1,8 @@
+import Flashcard from "../components/Flashcard";
+
 const Maths = () => {
     return (
-        <div>Maths</div>
+        <Flashcard category='maths' />
      );
 }
  

@@ -1,6 +1,8 @@
+import Flashcard from "../components/Flashcard";
+
 const Biology = () => {
     return ( 
-        <div>Biology</div>
+        <Flashcard category='biology' />
      );
 }
  

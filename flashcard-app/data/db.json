@@ -23,6 +23,30 @@
             "question" : "What is the formula for speed?",
             "answer" : "Distance over time. (s=d/t)",
             "id" : 4
+        },
+        {
+            "category" : "maths",
+            "question" : "What is 2x5?",
+            "answer" : "10",
+            "id" : 5
+        },
+        {
+            "category" : "maths",
+            "question" : "What is 12-5?",
+            "answer" : "7",
+            "id" : 6
+        },
+        {
+            "category" : "biology",
+            "question" : "What is photosynthesis?",
+            "answer" : "breathing of plants",
+            "id" : 7
+        },
+        {
+            "category" : "physics",
+            "question" : "What is the formula for energy?",
+            "answer" : "e=mc^2",
+            "id" : 8
         }
     ]
 }
