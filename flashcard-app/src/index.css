@@ -3,10 +3,13 @@
   margin: 0;
   padding: 0;
 }
+html{
+  height: 100vh;
+  background: linear-gradient(to top left, navy,  purple );
+}
 
 body{
   font-family: 'Montserrat', sans-serif;
-  background-color: rgb(20, 20, 20);
   color: white; 
 }
 .navbarContainer{
@@ -26,15 +29,14 @@ body{
 }
 
 .navbarContainer a:first-child{
-  background-color: rgb(20, 20, 20);
+  background-color: transparent;
   color: white; 
   font-weight: 600;
   position: absolute;
   left: 10px;
-  text-decoration: underline;
 }
 .navbarContainer a:last-child{
-  background-color: rgb(20, 20, 20);
+  background-color: transparent;
   color: white; 
   border: thin solid white;
   position: absolute;
@@ -47,8 +49,17 @@ body{
   transition: 0.125s ease-in-out;
 }
 .welcome-container{
-  background: linear-gradient(to bottom left, rgb(64, 20, 64), rgb(48, 1, 48));
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2) 8%, 
+    transparent 8%
+  );
+  background-position: 0% 0%;
+  background-size: 7vmin 7vmin;
+  border: thick solid white;
   padding: 30px;
+  width: 700px;
+  text-align: center;
+  border-radius: 8px;
 }
 .welcome-text{
   font-size: 32px;
@@ -58,10 +69,11 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 .flashcard-container{
-  background: linear-gradient(to bottom left, rgb(64, 20, 64), rgb(48, 1, 48));
+  background: transparent;
+  border: thin solid rgb(82, 82, 82);
   width: 450px;
   min-height: 250px;
   border-radius: 18px;
@@ -71,7 +83,7 @@ body{
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow: -3px -3px 10px rgb(69, 69, 69), 5px 5px 12px black;
+  box-shadow: -3px -3px 9px rgb(193, 193, 193), 3px 3px 9px rgb(21, 21, 21);
 
 }
 .category-label {
@@ -95,12 +107,25 @@ body{
   border-radius: 4px;
   outline: none;
   border: none;
-  background: linear-gradient(to right, rgb(70, 28, 110), rgb(59, 4, 110));
-  box-shadow: -1px -1px 5px rgb(159, 159, 159), 2px 2px 5px black;
+  background: transparent;
+  border: thin solid white;
   color: white;
   cursor: pointer;
 }
 .answer-button:hover {
-  background: linear-gradient(to right, rgb(74, 29, 115), rgb(41, 0, 79));
+  background-color: white;
+  color: rgb(0, 0, 0);
 }
 
+.delete-button{
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: rgb(255, 56, 56);
+  color: white;
+  width: 165px;
+  height: 35px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
