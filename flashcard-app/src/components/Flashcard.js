@@ -30,7 +30,7 @@ const Flashcard = (props) => {
           }).then(() => {
             setDeleted(true)
             setTimeout(()=>{
-                navigate("/"+flashcardCategory)
+                navigate(0)
             }, 1000)
           })
     }
@@ -41,12 +41,8 @@ const Flashcard = (props) => {
 
     const onNextQuestion = () => {
         setShowQuestion(!showQuestion)
-        if(questionIndex === filteredQuestions.length + 1){
-            setQuestionIndex(0)
-        }
-        else{
-            setQuestionIndex(questionIndex + 1)
-        }
+        setQuestionIndex(Math.floor(Math.random() * filteredQuestions.length))
+        
     }
 
     return ( 
@@ -58,7 +54,7 @@ const Flashcard = (props) => {
             <div>{(flashcardCategory !== 'home' && showQuestion) ? <AnswerButton handleAnswer = {onAnswerClick}/> : <NextQuestion handleNext = {onNextQuestion} />
             }</div>
             {showQuestion && <div><button className="delete-button" onClick={()=>{handleDelete(filteredId[questionIndex])}}>DELETE QUESTION</button></div>}
-            {deleted && <p>The question was deleted.</p>}
+            {deleted && <div>The question was deleted.</div>}
 
         </div>
      );

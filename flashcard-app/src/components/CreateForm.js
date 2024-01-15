@@ -40,20 +40,19 @@ const CreateForm = ()=>{
 
                 <label>Question</label>
                 <input 
-                type="text" 
-                placeholder="Question goes here..." 
+                type="text"
                 value={question}
                 onChange={(e) => {setQuestion(e.target.value)}}
                 />
                 <label>Answer</label>
                 <input 
-                type="text" 
-                placeholder="Answer goes here..." 
+                type="text"
                 value={answer}
                 onChange={(e) => {setAnswer(e.target.value)}}
                 />
-
-                <button>Add Question</button>
+                <div className="submit-button">
+                    <button>Add Question</button>
+                </div>
             </form>
 
             {addedQuestion && <p className='confirmation-text'>Your question was added.</p>}

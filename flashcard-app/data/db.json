@@ -7,12 +7,6 @@
       "id": 1
     },
     {
-      "category": "maths",
-      "question": "What is 2+2?",
-      "answer": "4",
-      "id": 2
-    },
-    {
       "category": "biology",
       "question": "What is mitochondria?",
       "answer": "powerhouse of the cell",
@@ -59,6 +53,12 @@
       "question": "Based on which chemical element is human life formed?",
       "answer": "Carbon",
       "id": 10
+    },
+    {
+      "category": "maths",
+      "question": "q1",
+      "answer": "a1",
+      "id": 11
     }
   ]
 }
