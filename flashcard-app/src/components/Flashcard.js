@@ -7,13 +7,12 @@ import CategoryText from "./CategoryText";
 
 const Flashcard = (props) => {
     const { data : flashcard, error, isPending} = useFetch(`http://localhost:8000/cards/`);
-    const [filteredQuestions, setFilteredQuestions] = useState(Array().fill(null))
-    const [filteredAnswers, setfilteredAnswers] = useState(Array().fill(null))
-    const [filteredId, setFilteredId] = useState(Array().fill(null))
-    const [filteredFlashcard, setFilteredFlashcard] = useState(Array().fill(null))
+    // const [filteredQuestions, setFilteredQuestions] = useState(Array().fill(null))
+    const filteredQuestions = Array()
     const [showQuestion, setShowQuestion] = useState(true)
     const [questionIndex, setQuestionIndex] = useState(0)
     const [deleted, setDeleted] = useState(false)
+    const filteredFlashcard = Array()
     const flashcardCategory = props.category
     const navigate = useNavigate()
 
@@ -22,8 +21,6 @@ const Flashcard = (props) => {
             if(question.category === flashcardCategory){
                 filteredFlashcard.push(question)
                 filteredQuestions.push(question.question)
-                filteredAnswers.push(question.answer)
-                filteredId.push(question.id)
             }})
     }
 
@@ -47,7 +44,6 @@ const Flashcard = (props) => {
         setQuestionIndex(Math.floor(Math.random() * filteredFlashcard.length))
         
     }
-
     return ( 
         <div className="flashcard-container">
             {isPending && <div>Loading...</div>}
@@ -55,10 +51,13 @@ const Flashcard = (props) => {
 
             <CategoryText category={flashcardCategory} />
             
-            <h1>{showQuestion ? filteredQuestions[questionIndex] : filteredAnswers[questionIndex]}</h1> 
+            <h1>{(showQuestion && filteredFlashcard) ? 
+            filteredQuestions[questionIndex] : filteredFlashcard[questionIndex].answer}</h1> 
+
             <div>{(flashcardCategory !== 'home' && showQuestion) ? <AnswerButton handleAnswer = {onAnswerClick}/> : <NextQuestion handleNext = {onNextQuestion} />
             }</div>
-            {showQuestion && <div><button className="delete-button" onClick={()=>{handleDelete(filteredId[questionIndex])}}>DELETE QUESTION</button></div>}
+
+            {(showQuestion && filteredFlashcard) &&<div><button className="delete-button" onClick={()=>{handleDelete(filteredFlashcard[questionIndex].id)}}>DELETE QUESTION</button></div>}
             {deleted && <div>The question was deleted.</div>}
         </div>
      );

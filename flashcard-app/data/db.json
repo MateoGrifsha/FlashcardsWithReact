@@ -53,12 +53,6 @@
       "question": "Based on which chemical element is human life formed?",
       "answer": "Carbon",
       "id": 10
-    },
-    {
-      "category": "maths",
-      "question": "q1",
-      "answer": "a1",
-      "id": 11
     }
   ]
 }
